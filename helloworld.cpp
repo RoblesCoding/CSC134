@@ -9,12 +9,12 @@ using namespace std;
 
 int main () {
     //Greet the world
-    cout << "Hello, world!" << endl;
+    cout << "Hello, User!" << endl;
     cout << "What is your name?" << endl;
     string name;
     cin >> name;
     cout << "Nice to meet you, " << name << "." << endl;
-    
+
 return 0; 
 
 }
