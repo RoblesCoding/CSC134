@@ -18,7 +18,7 @@ int main(){
     double priceAfterTax;
 
     //Promt Calculator
-    cout << "Welcome to restuarant checkout. How much meals did you have?" << endl;
+    cout << "Welcome to the restaurant checkout. How many meals did you have?" << endl;
     cin >> meals;
 
     //Perform calculations
@@ -28,7 +28,7 @@ int main(){
 
     //Display values and display message
     cout << "" << endl;
-    cout << "Thank you for eating with us, here is your total." << endl;
+    cout << "Thank you, here is your total." << endl;
     cout << "Price: $" << priceBeforeTax << endl;
     cout << "Tax: $" << amountTax << endl;
     cout << "Total: $" << priceAfterTax << endl;
