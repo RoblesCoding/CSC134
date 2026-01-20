@@ -4,7 +4,7 @@ CSC-134
 M2T1 cin method apple store
 */
 
-#include <iosstream>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -14,13 +14,13 @@ int main(){
     int apples;
 
     //Show promts and input information
-    cout << "Please enter your name.";
+    cout << "Please enter your name." << endl;
     cin >> name;
     cout << "Welcome to " << name << "'s apple farm." << endl;
-    cout << "Please insert the price of each apple."
+    cout << "Please insert the price of each apple." << endl;
     cin >> pricePerApple;
-    cout << "How many apples do you have?"
-    cin >> apples
+    cout << "How many apples do you have?" << endl;
+    cin >> apples;
 
     //Display price and amount of apples
     cout << "We have " << apples << " apples for sale." << endl;
