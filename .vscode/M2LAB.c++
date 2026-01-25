@@ -9,7 +9,7 @@ It will also calculate the cost to create, and the charge on the customer
 #include <iostream>
 using namespace std;
 
-int man(){
+int main(){
     //Fixed variables
     double COST_PER_CUBIC_FOOT = 0.23;
     double CHARGE_PER_CUBIC_FOOT = 0.5;
