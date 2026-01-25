@@ -32,10 +32,10 @@ int man(){
     cin >> height;
 
     //Perform calculations
-    volume = length * width * height;
-    cost = COST_PER_CUBIC_FOOT * volume;
-    charge = CHARGE_PER_CUBIC_FOOT * volume;
-    profit = charge - cost;
+        volume = length * width * height;
+        cost = COST_PER_CUBIC_FOOT * volume;
+        charge = CHARGE_PER_CUBIC_FOOT * volume;
+        profit = charge - cost;
 
     //Display calculations to customer
     cout << "The volume of the crate is " << volume << "sq ft." << endl;
