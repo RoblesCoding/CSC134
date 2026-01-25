@@ -10,6 +10,10 @@ This program will answer Question 1
 using namespace std;
 
 int main(){
+    //Set function for decimal places
+    std::cout << std::fixed;
+    std::cout << std::setprecision(2);
+
     //Variables
     string name;
     int account_number = 627452;
@@ -18,10 +22,6 @@ int main(){
     double withdraw;
     double difference;
     double final_account_balance;
-
-    //Set function for decimal places
-    std::cout << std::fixed; 
-    std::cout << std::setprecision(2); 
 
     //Promt the input for banking information
     cout << "Welcome to SYM Bank. What is your name?" << endl;
