@@ -12,6 +12,7 @@ using namespace std;
 int main(){
     //Variables
     string name;
+    int account_number = 627452;
     double starting_account_balance = 0;
     double deposit;
     double withdraw;
@@ -29,13 +30,15 @@ int main(){
     cout << "Please enter your deposit amount. If you do not wish to deposit; Press 0." << endl;
     cin >> deposit;
     cout << "Please enter your withdraw amount. If you do not wish to withdraw; Press 0." << endl;
-    cin >> deposit;
+    cin >> withdraw;
     
     //Perform Calculations
     difference = deposit - withdraw;
     final_account_balance = starting_account_balance + difference;
 
     //Show the final prompt
+    cout << "This is " << name << "'s bank account." << endl;
+    cout << "Your account number is " << account_number << "." << endl;
     cout << "Your new account balance is $" << final_account_balance << "." << endl;
     cout << "Thank you for using SYM Bank." << endl;
 
