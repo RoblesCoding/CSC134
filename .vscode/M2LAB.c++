@@ -38,7 +38,7 @@ int main(){
         profit = charge - cost;
 
     //Display calculations to customer
-    cout << "The volume of the crate is " << volume << "sq ft." << endl;
+    cout << "The volume of the crate is " << volume << " sq ft." << endl;
     cout << "The cost of the crate is $" << cost << "." << endl;
     cout << "The charge of the crate is $" << charge << "." << endl;
     cout << "The profit off the crate is $" << profit << "." << endl;
