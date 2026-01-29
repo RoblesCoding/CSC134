@@ -2,6 +2,7 @@
 Elias Robles
 CSC-134
 This program will find the area of two rectangles.
+The program will then compare rectangle areas.
 */
 
 #include <iostream>
@@ -41,5 +42,16 @@ int main(){
     cout << "The first rectangle's area is " << areaOne << "sqft." << endl;
     cout << "The second rectangle's area is " << areaTwo << "sqft." << endl;
 
+    //Determine which one is larger
+    if (areaOne > areaTwo){
+        cout << "Rectangle one's is larger." << endl;
+    }
+
+    else if (areaTwo > areaOne){
+        cout << "Rectangle two's area is larger." << endl;
+    }
+    else if (areaOne == areaTwo){
+        cout << "Both rectangles have the same area." << endl;
+    }
 return 0;
 }
