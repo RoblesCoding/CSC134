@@ -11,7 +11,7 @@ using namespace std;
 void chooseChoice1();
 void chooseChoice2();
 
-int main(){
+int main() {
     //variables
     int choice;
     //Prompt game
@@ -21,17 +21,17 @@ int main(){
     cout << "Choice 2: Good evening. I hope to negotiate mutual detente, and have the the force to ensure it." << endl;
     cin >> choice;
 
-        if (1 == choice) {
-            chooseChoice1();
-        }
+    if (1 == choice) {
+        chooseChoice1();
+    }
 
-        else if (2 == choice) {
-            chooseChoice2();
-        }
+    else if (2 == choice) {
+        chooseChoice2();
+    }
         
-        else {
-            cout << "Invalid option. Reinput choice 1 or 2." << endl;
-        }
+    else {
+       cout << "Invalid option. Reinput choice 1 or 2." << endl;
+    }
     
     cout << "Thanks for playing." << endl;
 return 0;
