@@ -14,25 +14,30 @@ void chooseChoice2();
 int main() {
     //variables
     int choice;
+    bool validInput = false;
     //Prompt game
-    cout << "You are a diplomat. Present an arguement with the rival to form a detente." << endl;
-    cout << "What do you say? Enter 1 or 2 to respond." << endl;
-    cout << "Choice 1: Good evening. I await our discussions of peace and detente for mutual properity." << endl;
-    cout << "Choice 2: Good evening. I hope to negotiate mutual detente, and have the the force to ensure it." << endl;
-    cin >> choice;
+    while (!validInput) {
+        cout << "You are a diplomat. Present an arguement with the rival to form a detente." << endl;
+        cout << "What do you say? Enter 1 or 2 to respond." << endl;
+        cout << "Choice 1: Good evening. I await our discussions of peace and detente for mutual properity." << endl;
+        cout << "Choice 2: Good evening. I hope to negotiate mutual detente, and have the the force to ensure it." << endl;
+        cin >> choice;
 
-    if (1 == choice) {
-        chooseChoice1();
-    }
+        if (1 == choice) {
+            chooseChoice1();
+            validInput = true;
+        }
 
-    else if (2 == choice) {
-        chooseChoice2();
+        else if (2 == choice) {
+            chooseChoice2();
+            validInput = true;
+        }
+            
+        else {
+        cout << "Invalid option. Reinput choice 1 or 2." << endl;
+        cin.clear();
+        }
     }
-        
-    else {
-       cout << "Invalid option. Reinput choice 1 or 2." << endl;
-    }
-    
     cout << "Thanks for playing." << endl;
 return 0;
 }
