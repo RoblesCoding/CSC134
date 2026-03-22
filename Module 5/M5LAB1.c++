@@ -6,6 +6,7 @@ This function has two storylines for the program
 #include <iostream>
 using namespace std;
 
+//Declare all of the functions
 void main_menu();
 void chooseChoice1();
 void chooseChoice2();
@@ -14,14 +15,14 @@ void chooseChoice11();
 void chooseChoice12();
 void chooseChoice21();
 void chooseChoice22();
-
+//int main
 int main() {
     cout << "Hello! Welcome to pro diplomat!" << endl;
     main_menu();
     cout << "Thanks for playing!" << endl;
     return 0;
 }
-
+//Present main menu
 void main_menu() {
     //Variables
     int choice;
@@ -54,14 +55,13 @@ void main_menu() {
             return;
         }
         else {
-            cout << "Invalid input, please inter a number 1-4." << endl;
+            cout << "Invalid input, please enter a number 1-4." << endl;
             cin.clear();
             cin.ignore(10000, '\n');
             continue;
         }
     }
 }
-
 //Present choice one
 void chooseChoice1() {
     //variables
@@ -97,7 +97,6 @@ void chooseChoice1() {
         }
     }
 }
-
 //Present choice 11
 void chooseChoice11() {
     cout << "The nations diplomats are not that impressed with this suggestion. They sign on the decreasing arms agreement, and not much else." << endl;
@@ -108,7 +107,7 @@ void chooseChoice12() {
     cout << "The nations diplomats are happy to hear this recomendation, and move agree. They sign the economic deal, and a small dearmerment deal." << endl;
     cout << "Game Over" << endl;
 }
-
+//Present choice 2
 void chooseChoice2() {
     int choice;
     bool validInput = false;    
@@ -138,17 +137,17 @@ void chooseChoice2() {
         }
     }
 }
-
+//Present choice 21
 void chooseChoice21() {
     cout << "The nations diplomats understand your solenm ask for decreasing arms. Both parties agree to a wide dearmerment agreement." << endl;
     cout << "Game Over" << endl;
 }
-
+//Present choice 22
 void chooseChoice22() {
     cout << "The diplomats are happy to hear this suggestion, but got cold feet mid-negotiotion. A small economic deal was signed." << endl;
     cout << "Game Over" << endl;
 }
-
+//Present choice 3
 void chooseChoice3() {
     cout << "The young diplomat is not able to handle the presure, and gives the other diplomats a great deal, but us a poor deal." << endl;
     cout << "Game Over" << endl;
