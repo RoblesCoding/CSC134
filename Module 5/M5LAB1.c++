@@ -6,6 +6,7 @@ This function has two storylines for the program
 #include <iostream>
 using namespace std;
 
+void main_menu();
 void chooseChoice1();
 void chooseChoice2();
 void chooseChoice3();
@@ -16,9 +17,9 @@ void chooseChoice22();
 
 int main() {
     cout << "Hello! Welcome to pro diplomat!" << endl;
-    void main_menu();
+    main_menu();
     cout << "Thanks for playing!" << endl;
-return 0;
+    return 0;
 }
 
 void main_menu() {
@@ -50,8 +51,7 @@ void main_menu() {
             validInput = true;
         }
         else if (choice == 4) {
-            return 0;
-            validInput = true;
+            return;
         }
         else {
             cout << "Invalid input, please inter a number 1-4." << endl;
