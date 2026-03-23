@@ -66,3 +66,15 @@ void main_menu() {
         }
     }
 }
+
+void programOne() {
+    //Variables
+    string month1;
+    string month2;
+    string month3;
+    double monthRain1;
+    double monthRain2;
+    double monthRain3;
+    cout << "Welcome to average rain calculator"
+    cout <<
+}
