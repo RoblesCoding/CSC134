@@ -33,7 +33,7 @@ void main_menu() {
     cout << "Program 3: Roman Numeral Generator" << endl;
     cout << "Program 4: Geometry Calculator" << endl;
     cout << "Program 5: Distance a Vehicle Travels" << endl;
-    cout << "Program 6: [Quit Main Menu]" << endl;
+    cout << "Program 6: [Quit to Main Menu]" << endl;
 
     while(!validInput) {
         if (choice == 1) {
@@ -132,75 +132,101 @@ void programOne() {
 
 double getLength();
 double getWidth();
-double getArea(double length, double width);
-void displayData(double length, double width, double area);
+double getHeight();
+double getVolume(double length, double width, double height);
+void displayData(double length, double width, double height, double volume);
 void programTwo() {
-  //Promt the calculator
-  cout << "Welcome to area rectange calculator!" << endl;
+    //Promt the calculator
+    cout << "Welcome to volume of block calculator!" << endl;
 
-  //Declare Variables
-  // Get the rectangle's length.
-  double length = getLength();
+    //Declare Variables
+    // Get the rectangle's length.
+    double length = getLength();
    
-  // Get the rectangle's width.
-  double width = getWidth();
+    // Get the rectangle's width.
+    double width = getWidth();
+    
+    //Get the rectangles height.
+    double height = getHeight();
+  
+    // Get the rectangle's volume.
+
+    double volume = getVolume(length, width, height);
    
-  // Get the rectangle's area.
-  double area = getArea(length, width);
-   
-  // Display the rectangle's data.
-  displayData(length, width, area);
+    // Display the rectangle's data.
+    displayData(length, width, height, volume);
 }
 
 double getLength() {
-  double length;
-  bool validInput = false;
-  cout << "What is the length of the rectangle?" << endl;
+    double length;
+    bool validInput = false;
+    cout << "What is the length of the rectangle?" << endl;
   
-  while (!validInput) {
-    cin >> length;
+    while (!validInput) {
+        cin >> length;
     
-    if (cin) {
-      validInput = true;
+        if (cin) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
     }
-    else {
-      cout << "Invalid input, please enter a number." << endl;
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');  
-    }
-  }
-  return length;
+    return length;
 }
 
 double getWidth() {
-  double width;
-  bool validInput = false;
-  cout << "What is the width of the rectangle?" << endl;
+    double width;
+    bool validInput = false;
+    cout << "What is the width of the rectangle?" << endl;
   
-  while (!validInput) {
-    cin >> width;
+    while (!validInput) {
+        cin >> width;
     
-    if (cin) {
-      validInput = true;
+        if (cin) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
     }
-    else {
-      cout << "Invalid input, please enter a number." << endl;
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
-  }
-  return width;
+    return width;
 }
 
-double getArea(double length,double width) {
-  return length * width;
+double getHeight() {
+    double height;
+    bool validInput = false;
+    cout << "What is the height of the rectangle?" << endl;
+  
+    while (!validInput) {
+        cin >> height;
+    
+        if (cin) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    return height;
 }
 
-void displayData(double length,double width, double area) {
-  cout << "These are the dimensions of the rectangle." << endl;
-  cout << "The length is: " << length << "." << endl;
-  cout << "The width is: " << width << "." << endl;
-  cout << "The area is: " << area << "." << endl;
+double getVolume(double length, double width, double height) {
+    return length * width * height;
+}
+
+void displayData(double length,double width, double height, double volume) {
+    cout << "These are the dimensions of the rectangle." << endl;
+    cout << "The length is: " << length << "." << endl;
+    cout << "The width is: " << width << "." << endl;
+    cout << "The height is: " << height << "." << endl;
+    cout << "The volume is: " << volume << "." << endl;
 }
 
 void programThree() {
@@ -211,38 +237,175 @@ void programThree() {
 
     switch(number) {
         case 1:
-            cout << "I" << endl;
+            cout << "Numeral I" << endl;
             break;
         case 2:
-            cout << "II" << endl;
+            cout << "Numeral II" << endl;
             break;
         case 3:
-            cout << "III" << endl;
+            cout << "Numeral III" << endl;
             break;
         case 4:
-            cout << "IV" << endl;
+            cout << "Numeral IV" << endl;
             break;
         case 5:
-            cout << "V" << endl;
+            cout << "Numeral V" << endl;
             break;
         case 6:
-            cout << "VI" << endl;
+            cout << "Numeral VI" << endl;
             break;
         case 7:
-            cout << "VII" << endl;
+            cout << "Numeral VII" << endl;
             break;
         case 8:
-            cout << "VIII" << endl;
+            cout << "Numeral VIII" << endl;
             break;
         case 9:
-            cout << "IX" << endl;
+            cout << "Numeral IX" << endl;
             break;
         case 10:
-            cout << "X" << endl;
+            cout << "Numeral X" << endl;
             break;
         default:
             cout << "Please enter a number 1-10." << endl;
     }
     cout << "Thank you for using Roman Numerals program." << endl;
+}
+
+double areaCircle();
+double areaRectangle();
+double areaTriangle();
+
+void programFour() {
+    cout << "Welcome to Area Geometry Calculator." << endl;
+    cout << "What geometric shape do you want the area for?" << endl;
+    cout << "Choice 1: Calculate the area of a circle." << endl;
+    cout << "Choice 2: Calculate the area of a rectangle." << endl;
+    cout << "Choice 3: Calculate the area of a triangle." << endl;
+    cout << "Choice 4: [Quit the Program]" << endl;
+    int choice;
+    double area;
+    bool validInput = false;
+    while (!validInput) {
+        cin >> choice;
+
+        if (choice == 1) {
+            cout << "You have chosen to calculate the area of a circle." << endl;
+            double area = areaCircle();
+            cout << "The area of the circle is: " << area << "." << endl; 
+            validInput = true;
+        }
+        else if (choice == 2) {
+            cout << "You have chosen to calculate the area of a rectangle." << endl;
+            double area = areaRectangle();
+            cout << "The area of the rectangle is: " << area << "." << endl;
+            validInput = true;
+        }
+        else if (choice == 3) {
+            cout << "You have chosen to calculate the area of a triangle." << endl;
+            double area = areaTriangle();
+            cout << "The area of the triangle is: " << area << "." << endl;
+            validInput = true;
+        }
+        else if (choice == 4) {
+            return;
+        }
+        else {
+            cout << "Invalid input, please enter a number 1-4." << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            continue;
+        }
+    }
+}
+
+double areaCircle() {
+    double radius;
+    bool validInput = false;
+    cout << "What is the radius of the circle?" << endl;
+  
+    while (!validInput) {
+        cin >> radius;
+    
+        if (cin && radius > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    return 3.14 * radius * radius;
+}
+
+double areaRectangle() {
+    double length;
+    double width;
+    bool validInput = false;
+    cout << "What is the length of the rectangle?" << endl;
+  
+    while (!validInput) {
+        cin >> length;
+    
+        if (cin && length > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    cout << "What is the width of the rectangle?" << endl;
+  
+    while (!validInput) {
+        cin >> width;
+    
+        if (cin && width > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    return length * width;
+}
+
+double areaTriangle() {
+    double width;
+    double height;
+    bool validInput = false;
+    cout << "What is the base of the triangle?" << endl;
+  
+    while (!validInput) {
+        cin >> width;
+    
+        if (cin && width > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    cout << "What is the height of the triangle?" << endl;
+  
+    while (!validInput) {
+        cin >> height;
+    
+        if (cin && height > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    return 0.5 * width * height;
 }
 
