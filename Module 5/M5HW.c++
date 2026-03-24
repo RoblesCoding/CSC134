@@ -409,3 +409,50 @@ double areaTriangle() {
     return 0.5 * width * height;
 }
 
+void programfive() {
+    //Initial Variables
+    double speed;
+    int hours;
+    double distance;
+    bool validInput = false;
+    cout << "Welcome to distance traveled calculator." << endl;
+    cout << "What is the speed of the vehicle in miles per hour?" << endl;
+    //While statement
+    while (!validInput) {
+        cin >> speed;
+    
+        if (speed > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    cout << "How many hours has the vehicle traveled?" << endl;
+    //While statement
+    while (!validInput) {
+        cin >> hours;
+    
+        if (hours > 0) {
+        validInput = true;
+        }
+        else {
+        cout << "Invalid input, please enter a positive number." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  
+        }
+    }
+    //Variables for hours traveled
+    const int MIN_NUMBER = 1;
+    const int MAX_NUMBER = hours;
+    int intergerIncrease = 1;
+    
+    distance = speed * intergerIncrease;
+    cout << "Hours" << "\t" << "Distance" << endl;
+    while (intergerIncrease <= MAX_NUMBER) {
+        cout << intergerIncrease << "\t" << distance << endl;
+        intergerIncrease++;
+    }
+}
