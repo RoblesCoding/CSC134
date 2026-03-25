@@ -6,6 +6,7 @@ This will answer all six (6) questions
 
 #include <iostream>
 #include <limits>
+#include <string>
 using namespace std;
 
 void main_menu();
@@ -36,6 +37,8 @@ void main_menu() {
     cout << "Program 6: [Quit to Main Menu]" << endl;
 
     while(!validInput) {
+        cin >> choice;
+
         if (choice == 1) {
             programOne();
             validInput = true;
@@ -60,7 +63,7 @@ void main_menu() {
             return;
         }
         else {
-            cout << "Invalid input, please enter a number 1-4." << endl;
+            cout << "Invalid input, please enter a number 1-6." << endl;
             cin.clear();
             cin.ignore(10000, '\n');
             continue;
@@ -79,6 +82,7 @@ void programOne() {
     double monthRain3;
     double averageRain;
     cout << "Welcome to average rain calculator" << endl;
+    
     cout << "Enter month one: " << endl;
     cin >> month1;
     cout << "Enter rainfall for " << month1 << endl;
@@ -89,37 +93,45 @@ void programOne() {
                 validInput = true;
             }
             else {
-                cout << "Invalid input, please enter a number 1-4." << endl;
+                cout << "Invalid input, please enter a number above 0." << endl;
                 cin.clear();
                 cin.ignore(10000, '\n');
                 continue;
             }
         }
+    
+    cin.clear();
+    cin.ignore(10000, '\n');
     cout << "Enter month two: " << endl;
     cin >> month2;
     cout << "Enter rainfall for " << month2 << endl;
+
         while(!validInput) {
             cin >> monthRain2;
-            if (monthRain1 > 0) {
+            if (monthRain2 > 0) {
                 validInput = true;
             }
             else {
-                cout << "Invalid input, please enter a number 1-4." << endl;
+                cout << "Invalid input, please enter a number above 0." << endl;
                 cin.clear();
                 cin.ignore(10000, '\n');
                 continue;
             }
         }
+    
+    cin.clear();
+    cin.ignore(10000, '\n');
     cout << "Enter month three: " << endl;
-    cin >> month2;
+    cin >> month3;
     cout << "Enter rainfall for " << month3 << endl;
+
         while(!validInput) {
             cin >> monthRain3;
-            if (monthRain1 > 0) {
+            if (monthRain3 > 0) {
                 validInput = true;
             }
             else {
-                cout << "Invalid input, please enter a number 1-4." << endl;
+                cout << "Invalid input, please enter a number above 0." << endl;
                 cin.clear();
                 cin.ignore(10000, '\n');
                 continue;
@@ -230,11 +242,23 @@ void displayData(double length,double width, double height, double volume) {
 }
 
 void programThree() {
+    bool validInput = false;
     int number;
     cout << "Welcome to Roman Numeral Numbers 1-10." << endl;
     cout << "Enter a number 1-10." << endl;
     cin >> number;
 
+    while (!validInput) {
+        if (number >= 1 && number <= 10) {
+            validInput = true;
+        }
+        else {
+            cout << "Invalid input, please enter a number 1-10." << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin >> number;
+        }
+    }
     switch(number) {
         case 1:
             cout << "Numeral I" << endl;
@@ -409,7 +433,7 @@ double areaTriangle() {
     return 0.5 * width * height;
 }
 
-void programfive() {
+void programFive() {
     //Initial Variables
     double speed;
     int hours;
