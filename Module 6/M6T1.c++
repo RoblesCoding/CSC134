@@ -71,6 +71,26 @@ void main_program() {
 
         //Check for positive numbers
         if(cars >= 0) {
+            switch(count) {
+                case 1:
+                cars_monday = cars;
+                break;
+                case 2:
+                cars_tuesday = cars;
+                break;
+                case 3:
+                cars_wednesday = cars;
+                break;
+                case 4:
+                cars_thursday = cars;
+                break;
+                case 5:
+                cars_friday = cars;
+                break;
+                default:
+                cout << "Error" << endl;
+                break;
+            }
             totalCars += cars;
             count++;
         }
