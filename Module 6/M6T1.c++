@@ -8,8 +8,10 @@ M6T1 - This program will use loops and arrays for cars
 #include <string>
 using namespace std;
 
+//Main Program
 void main_program();
 
+//int Main
 int main() {
     cout << "Loading Program..." << endl;
     main_program();
@@ -71,6 +73,7 @@ void main_program() {
 
         //Check for positive numbers
         if(cars >= 0) {
+            //Switch for calculating the day of the week cars
             switch(count) {
                 case 1:
                 cars_monday = cars;
@@ -94,26 +97,26 @@ void main_program() {
             totalCars += cars;
             count++;
         }
+        //Reenter positive number
         else {
             cout << "Please enter a positive number." << endl;
             cin.clear();
             cin.ignore(10000, '\n');
             continue;
         }
-        
-                //Switch statement for the Weekday
-
     }
 
     //Present results of Program
     //The amount of cars each day
+    cout << "\n----Total Data on Cars----" << endl;
     cout << "The amount of cars on Monday: " << cars_monday << "." << endl;
     cout << "The amount of cars on Tuesday: " << cars_tuesday << "." << endl;
     cout << "The amount of cars on Wednesday: " << cars_wednesday << "." << endl;
     cout << "The amount of cars on Thursday: " << cars_thursday << "." << endl;
     cout << "The amount of cars on Friday: " << cars_friday << "." << endl;
-    cout << "'\n'" << endl;
+    cout << "---------------------------" << endl;
     cout << "The total amount of cars: " << totalCars << "." << endl;
     averageCars = totalCars / 5;
     cout << "The average amount of cars: " << averageCars << "." << endl;
+    cout << "---------------------------" << endl;
 }
