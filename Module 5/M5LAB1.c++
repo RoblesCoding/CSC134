@@ -17,6 +17,7 @@ void chooseChoice21();
 void chooseChoice22();
 //int main
 int main() {
+    //Prompt the game
     cout << "Hello! Welcome to pro diplomat!" << endl;
     main_menu();
     cout << "Thanks for playing!" << endl;
@@ -26,8 +27,8 @@ int main() {
 void main_menu() {
     //Variables
     int choice;
-    bool validInput = false;    
-
+    bool validInput = false;  
+    //While loop for inputs
     while (!validInput) {
         //Display program
         cout << "You are a diplomat and envoy in route to a nation previously hostile. New negotioations are happeneing to warm relations, and create peace." << endl;
@@ -38,7 +39,7 @@ void main_menu() {
         cout << "Choice 3: I actually do not care about this, I am letting this in the hands of the junior diplomant." << endl;
         cout << "Choice 4: [QUIT]" << endl;
         cin >> choice;
-
+        //If statements
         if (choice == 1) {
             chooseChoice1();
             validInput = true;

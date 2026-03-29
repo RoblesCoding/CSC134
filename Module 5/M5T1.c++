@@ -18,8 +18,10 @@ int main() {
     cout << "Hello from int main()" << endl;
     //Load function say_hello
     say_hello();
+    //Make the function equal the variables
     int my_answer = give_the_answer();
     int twotimes = double_a_number(7);
+    //Promt the values
     cout << "Here is the answer: " << my_answer << endl;
     cout << "Here's another number: " << twotimes << endl;
 return 0;

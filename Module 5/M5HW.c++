@@ -10,19 +10,20 @@ This will answer all six (6) questions
 using namespace std;
 
 void main_menu();
-
+//Int Main
 int main() {
+    //Main program
     cout << "Generating main menu." << endl;
     main_menu();
     return 0;
 }
-
+//Declare functions for each program
 void programOne();
 void programTwo();
 void programThree();
 void programFour();
 void programFive();
-
+//Main menu
 void main_menu() {
     bool validInput = false;
     int choice;
@@ -35,7 +36,7 @@ void main_menu() {
     cout << "Program 4: Geometry Calculator" << endl;
     cout << "Program 5: Distance a Vehicle Travels" << endl;
     cout << "Program 6: [Quit to Main Menu]" << endl;
-
+    //While statement for valid inputs
     while(!validInput) {
         cin >> choice;
 
@@ -83,6 +84,7 @@ void programOne() {
     double averageRain;
     cout << "Welcome to average rain calculator" << endl;
     
+    //Create three loops for each of the months and their names
     cout << "Enter month one: " << endl;
     cin >> month1;
     cout << "Enter rainfall for " << month1 << endl;
@@ -142,6 +144,7 @@ void programOne() {
     cout << "Thank you for using average rain calculator." << endl;
 }
 
+//Declare functions for hyperrectangle volume calculator
 double getLength();
 double getWidth();
 double getHeight();
@@ -242,6 +245,7 @@ void displayData(double length,double width, double height, double volume) {
 }
 
 void programThree() {
+    //Roman numeral generator, Prompt program
     bool validInput = false;
     int number;
     cout << "Welcome to Roman Numeral Numbers 1-10." << endl;
@@ -259,6 +263,7 @@ void programThree() {
             cin >> number;
         }
     }
+    //Use switch statement for Roman Numerals 1-10
     switch(number) {
         case 1:
             cout << "Numeral I" << endl;
@@ -296,11 +301,13 @@ void programThree() {
     cout << "Thank you for using Roman Numerals program." << endl;
 }
 
+//Geometry claculator functions
 double areaCircle();
 double areaRectangle();
 double areaTriangle();
 
 void programFour() {
+    //Prompt the claculator
     cout << "Welcome to Area Geometry Calculator." << endl;
     cout << "What geometric shape do you want the area for?" << endl;
     cout << "Choice 1: Calculate the area of a circle." << endl;
@@ -312,7 +319,7 @@ void programFour() {
     bool validInput = false;
     while (!validInput) {
         cin >> choice;
-
+        //if Statement
         if (choice == 1) {
             cout << "You have chosen to calculate the area of a circle." << endl;
             double area = areaCircle();
@@ -342,7 +349,7 @@ void programFour() {
         }
     }
 }
-
+//Area circle claculator
 double areaCircle() {
     double radius;
     bool validInput = false;
@@ -362,7 +369,7 @@ double areaCircle() {
     }
     return 3.14 * radius * radius;
 }
-
+//Area rectangle calculator
 double areaRectangle() {
     double length;
     double width;
@@ -397,7 +404,7 @@ double areaRectangle() {
     }
     return length * width;
 }
-
+//Area triangle calculator
 double areaTriangle() {
     double width;
     double height;
@@ -439,6 +446,7 @@ void programFive() {
     int hours;
     double distance;
     bool validInput = false;
+    //Prompt Program
     cout << "Welcome to distance traveled calculator." << endl;
     cout << "What is the speed of the vehicle in miles per hour?" << endl;
     //While statement

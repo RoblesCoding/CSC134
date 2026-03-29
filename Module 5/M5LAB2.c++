@@ -35,6 +35,7 @@ return 0;
 }
 
 double getLength() {
+  //Completet the math for the length
   double length;
   bool validInput = false;
   cout << "What is the length of the rectangle?" << endl;
@@ -55,6 +56,7 @@ double getLength() {
 }
 
 double getWidth() {
+  //Complete the math for the width
   double width;
   bool validInput = false;
   cout << "What is the width of the rectangle?" << endl;
@@ -75,10 +77,12 @@ double getWidth() {
 }
 
 double getArea(double length,double width) {
+  //Find the area for the rectangle
   return length * width;
 }
 
 void displayData(double length,double width, double area) {
+  //Promt the area for the rectangle
   cout << "These are the dimensions of the rectangle." << endl;
   cout << "The length is: " << length << "." << endl;
   cout << "The width is: " << width << "." << endl;

@@ -26,6 +26,7 @@ int main() {
         //Input inside for misinputs
         cin >> num;        
         if (num >= 1 && num <= 10){
+            //Make the number suqare euqal the function
             numsquared = square(num);
             printAnswerLine(numsquared);
             ValidInput = true;
