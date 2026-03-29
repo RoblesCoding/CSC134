@@ -388,8 +388,10 @@ double areaRectangle() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');  
         }
     }
+    //Reset valid input boolean
+    validInput = false;
     cout << "What is the width of the rectangle?" << endl;
-  
+    
     while (!validInput) {
         cin >> width;
     
@@ -423,6 +425,8 @@ double areaTriangle() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');  
         }
     }
+    //Reset valid input boolean
+    validInput = false;
     cout << "What is the height of the triangle?" << endl;
   
     while (!validInput) {
